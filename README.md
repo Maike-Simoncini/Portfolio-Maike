@@ -34,7 +34,7 @@ Foco em design minimalista e experiência do usuário fluida!
 
 ## 📷 Demonstração
 
-<a><img width="100%" src="img/portifolio.png"></a>
+<a><img width="100%" src="images/portifolio.png"></a>
 
 
 ## 🔗 Link para o Projeto
