@@ -1,0 +1,89 @@
+/* Estilo personalizado para a cor azul ciano */
+.text-cyan-blue {
+    color: #22D4FD;
+}
+
+/* Sobreescrever cores roxas/violetas do Tailwind com azul ciano */
+/* Cores de texto mais abrangentes */
+[class*="text-purple-"], /* Seleciona qualquer classe que contenha "text-purple-" */
+[class*="text-violet-"] { /* Seleciona qualquer classe que contenha "text-violet-" */
+    color: #22D4FD !important;
+}
+
+/* Cores de fundo mais abrangentes */
+[class*="bg-purple-"]:not([class*="bg-purple-500\/10"]), /* Seleciona qualquer bg-purple-XXX, exceto os com opacidade */
+[class*="bg-violet-"]:not([class*="bg-violet-500\/10"]) { /* Seleciona qualquer bg-violet-XXX, exceto os com opacidade */
+    background-color: #22D4FD !important;
+}
+
+/* Para as variantes de opacidade, mantemos a regra específica para controle fino */
+.bg-purple-500\/10, .bg-violet-500\/10 {
+    background-color: rgba(34, 212, 253, 0.1) !important; /* 10% opacidade do #22D4FD */
+}
+.dark .bg-purple-400\/10, .dark .bg-violet-400\/10 {
+    background-color: rgba(34, 212, 253, 0.4) !important; /* 40% opacidade do #22D4FD para dark mode */
+}
+
+/* Gradientes - Incluindo gradiente diagonal (to-br) */
+.bg-gradient-to-r.from-purple-500.to-violet-500,
+.bg-gradient-to-br.from-purple-500.to-violet-500 { /* Adicionado 'to-br' aqui */
+    background-image: linear-gradient(to right, #22D4FD, #1aa0c0) !important;
+}
+
+/* Efeitos de hover para gradientes */
+.hover\:from-purple-600.hover\:to-violet-600:hover {
+    background-image: linear-gradient(to right, #1aa0c0, #137e96) !important; /* Tons mais escuros de ciano para hover */
+}
+
+/* Cores do tema escuro existentes - assegurando que continuam a funcionar */
+.dark .bg-gray-50 {
+    background-color: #0f172a;
+}
+.dark .text-gray-900 {
+    color: #f8fafc;
+}
+.dark .bg-white\/80 {
+    background-color: rgba(15, 23, 42, 0.8);
+}
+.dark .border-gray-200 {
+    border-color: #1e293b;
+}
+.dark .bg-gray-100 {
+    background-color: #1e293b;
+}
+.dark .text-gray-600 {
+    color: #94a3b8;
+}
+.dark .bg-gray-900\/50 {
+    background-color: rgba(15, 23, 42, 0.5);
+}
+.dark .bg-white {
+    background-color: #1e293b;
+}
+.dark .border-gray-200 {
+    border-color: #334155;
+}
+.dark .text-gray-800 {
+    color: #e2e8f0;
+}
+.dark .bg-gray-700 {
+    background-color: #334155;
+}
+.dark .text-gray-200 {
+    color: #e2e8f0;
+}
+
+/* Estilo para o link de navegação ativo (mais específico) */
+header nav .nav-link.active {
+    background-color: rgba(34, 212, 253, 0.15) !important; /* Fundo ciano sutil */
+    color: #22D4FD !important; /* Texto ciano para o link ativo */
+}
+
+/* Garante que o texto dos links de navegação volte à cor padrão quando não ativo */
+header nav .nav-link:not(.active) {
+    color: #6b7280; /* Cor padrão do texto (text-gray-600) */
+}
+
+.dark header nav .nav-link:not(.active) {
+    color: #94a3b8; /* Cor padrão do texto no dark mode (dark:text-gray-300) */
+}
